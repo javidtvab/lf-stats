@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LF Stats · Baloncesto femenino en datos</title>
+<meta name="description" content="Estadísticas avanzadas de las competiciones femeninas de la FEB a partir de sus actas públicas.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="cabecera__dentro">
+    <a class="marca" href="#/"><span class="marca__punto" aria-hidden="true"></span>LF Stats</a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#/" data-seccion="inicio">Inicio</a>
+      <a href="#/jugadoras" data-seccion="jugadoras">Jugadoras</a>
+      <a href="#/equipos" data-seccion="equipos">Equipos</a>
+      <a href="#/comparador" data-seccion="comparador">Comparador</a>
+      <a href="#/liga" data-seccion="liga">Liga</a>
+      <a href="#/jornada" data-seccion="jornada">Jornadas</a>
+      <a href="#/partidos" data-seccion="partidos">Partidos</a>
+      <a href="#/metodo" data-seccion="metodo">Método</a>
+    </nav>
+    <div class="cabecera__extra">
+      <label class="oculto" for="competicion">Competición</label>
+      <select id="competicion"></select>
+      <label class="oculto" for="temporada">Temporada</label>
+      <select id="temporada"></select>
+      <button id="tema" class="boton-icono" type="button" aria-label="Cambiar tema claro u oscuro">◐</button>
+      <button id="salir" class="boton-salir" type="button" hidden>Salir</button>
+    </div>
+  </div>
+</header>
+<main id="vista" class="vista" tabindex="-1"><p class="tenue">Cargando…</p></main>
+<footer class="pie">
+  <p>LF Stats es un proyecto independiente y <strong>no está afiliado a la Federación Española de Baloncesto</strong>.
+    Los datos salen de las actas públicas de <a href="https://baloncestoenvivo.feb.es/" rel="noopener">baloncestoenvivo.feb.es</a>.</p>
+  <p id="actualizado"></p>
+</footer>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script src="datos/acceso.js" onerror="window.LF_ACCESO = null"></script>
+<script src="nucleo.js"></script>
+<script src="entrada.js"></script>
+<script src="vistas_jugadoras.js"></script>
+<script src="vistas_equipos.js"></script>
+<script src="vistas_liga.js"></script>
+<script src="vistas_pbp.js"></script>
+<script src="vistas_comparador.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
