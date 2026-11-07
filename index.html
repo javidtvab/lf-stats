@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LF Stats · Baloncesto en datos</title>
+<meta name="description" content="Estadísticas avanzadas de las competiciones de baloncesto femenino y masculino a partir de sus actas públicas.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="cabecera__dentro">
+    <a class="marca" href="#/"><span class="marca__punto" aria-hidden="true"></span>LF Stats</a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#/" data-seccion="inicio">Inicio</a>
+      <a href="#/jugadoras" data-seccion="jugadoras">Jugadoras</a>
+      <a href="#/equipos" data-seccion="equipos">Equipos</a>
+      <a href="#/comparador" data-seccion="comparador">Comparador</a>
+      <a href="#/liga" data-seccion="liga">Liga</a>
+      <a href="#/jornada" data-seccion="jornada">Jornadas</a>
+      <a href="#/partidos" data-seccion="partidos">Partidos</a>
+      <a href="#/cantera" data-seccion="cantera">Cantera</a>
+      <a href="#/perfiles" data-seccion="perfiles">Fichajes</a>
+      <a href="#/metodo" data-seccion="metodo">Método</a>
+    </nav>
+    <div class="buscador" role="search">
+      <label class="oculto" for="buscar">Buscar</label>
+      <input id="buscar" type="search" placeholder="Buscar jugadora o equipo" autocomplete="off" aria-controls="resultados" aria-expanded="false">
+      <div id="resultados" class="resultados" role="listbox" hidden></div>
+    </div>
+    <div class="cabecera__extra">
+      <label class="oculto" for="genero">Sección</label>
+      <select id="genero"><option value="f">Femenino</option><option value="m">Masculino</option></select>
+      <label class="oculto" for="competicion">Competición</label>
+      <select id="competicion"></select>
+      <label class="oculto" for="temporada">Temporada</label>
+      <select id="temporada"></select>
+      <button id="tema" class="boton-icono" type="button" aria-label="Cambiar tema claro u oscuro">◐</button>
+      <button id="salir" class="boton-salir" type="button" hidden>Salir</button>
+    </div>
+  </div>
+</header>
+<main id="vista" class="vista" tabindex="-1"><p class="tenue">Cargando…</p></main>
+<footer class="pie">
+  <p>LF Stats es un proyecto independiente y <strong>no está afiliado a la Federación Española de Baloncesto ni a la ACB</strong>.
+    Los datos salen de las actas públicas de <a href="https://baloncestoenvivo.feb.es/" rel="noopener">baloncestoenvivo.feb.es</a> y, los de la Liga Endesa, de <a href="https://live.acb.com/" rel="noopener">live.acb.com</a>.</p>
+  <p><a href="#/salud">Estado de los datos</a></p>
+  <p id="actualizado"></p>
+</footer>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script src="datos/acceso.js" onerror="window.LF_ACCESO = null"></script>
+<script src="nucleo.js"></script>
+<script src="entrada.js"></script>
+<script src="vistas_jugadoras.js"></script>
+<script src="vistas_equipos.js"></script>
+<script src="vistas_liga.js"></script>
+<script src="vistas_pbp.js"></script>
+<script src="vistas_comparador.js"></script>
+<script src="vistas_carrera.js"></script>
+<script src="vistas_fichajes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
